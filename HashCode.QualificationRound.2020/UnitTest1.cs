@@ -35,6 +35,14 @@ namespace HashCode.QualificationRound._2020
             output.WriteOutput(@"output\example.txt");
         }
 
+        [TestMethod]
+        public void TestReadFile()
+        {
+            var result = Input.ParseInputFile(@"input\a_example.txt");
+
+            result.Should().NotBeNull();
+
+        }
         private static Output GetExampleOutput()
         {
             var library1 = new Library()
