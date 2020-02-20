@@ -1,25 +1,15 @@
+using System;
+using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace HashCode.QualificationRound._2020
 {
-    public class Library
+    public class Solution
     {
-        public int DaysToSign { get; set; }
-
-        public int BookPerDay { get; set; }
-
-        public int[] Books { get; set; }
-
-        public int Id { get; set; }
-    }
-
-    public class Input
-    {
-        public Library[] Libraries { get; set; }
-
-        public int[] Catalog { get; set; }
-
-        public int DaysForScanning { get; set; }
+        public static Output Process(Input input)
+        {
+            throw new NotImplementedException("");
+        }
     }
 
     [TestClass]
@@ -48,23 +38,39 @@ namespace HashCode.QualificationRound._2020
         [TestMethod]
         public void TestParseOutput()
         {
+            var output = GetExampleOutput();
+
+            output.WriteOutput(@"output\example.txt");
+        }
+
+        private static Output GetExampleOutput()
+        {
             var library1 = new Library()
             {
                 Id = 1,
-                Books = new int[] { 5,2,3},
+                Books = new int[] { 5, 2, 3 },
             };
             var library2 = new Library()
             {
                 Id = 0,
                 Books = new int[] { 0, 1, 2, 3, 4 },
             };
-            
-            var output = new Output()
-            {
-                Libraries = new Library[]{library1, library2},
-            };
 
-            output.WriteOutput(@"output\example.txt");
+            return new Output()
+            {
+                Libraries = new Library[] { library1, library2 },
+            };
+        }
+
+        [TestMethod]
+        public void CalculateSolution()
+        {
+            var input = new Input();
+
+            var result =Solution.Process(input);
+
+            GetExampleOutput().Should().BeEquivalentTo(result);
+
         }
     }
 }
