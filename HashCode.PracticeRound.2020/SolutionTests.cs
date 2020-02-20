@@ -84,6 +84,7 @@ namespace HashCode.PracticeRound._2020
         }
 
         [TestMethod]
+        [Ignore]
         public void ProcessWithSolution1()
         {
             // Arrange
@@ -106,6 +107,7 @@ namespace HashCode.PracticeRound._2020
         }
 
         [TestMethod]
+        [Ignore]
         public void ProcessWithSolution2()
         {
             // Arrange
