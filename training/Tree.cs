@@ -16,7 +16,7 @@ public class Node
     public Node left;
     public Node right;
 
-    public Tree(Parameters)
+    public void Node()
     {
         
     }
