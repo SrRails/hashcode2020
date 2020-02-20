@@ -7,7 +7,7 @@ namespace HashCode.QualificationRound._2020
     {
         public int NumberOfLibraries { get; set; }
 
-        public List<Library> Libraries { get; set; }
+        public List<Library> Libraries { get; set; } = new List<Library>();
 
         public void WriteOutput(string path)
         {
@@ -20,7 +20,7 @@ namespace HashCode.QualificationRound._2020
             {
                 file.Write(library.Id);
                 file.Write(" ");
-                file.Write(library.Books.Length);
+                file.Write(library.Books.Count);
                 file.Write("\n");
 
                 foreach (var book in library.Books)

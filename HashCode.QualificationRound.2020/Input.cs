@@ -36,7 +36,7 @@ namespace HashCode.QualificationRound._2020
                 result.Libraries[i].DaysToSign = Int32.Parse(header[1]);
                 result.Libraries[i].BookPerDay = Int32.Parse(header[2]);
 
-                result.Libraries[i].Books = reader.ReadLine().Split(" ").Select(Int32.Parse).ToArray();
+                result.Libraries[i].Books = reader.ReadLine().Split(" ").Select(Int32.Parse).ToList();
             }
             return result;
         }
