@@ -46,6 +46,7 @@ namespace HashCode.PracticeRound._2020
         }
 
         [TestMethod]
+        [Ignore]
         public void ProcessExample_ProvideCorrectResult()
         {
             // Arrange
