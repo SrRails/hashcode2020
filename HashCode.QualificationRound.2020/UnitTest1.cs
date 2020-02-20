@@ -9,6 +9,8 @@ namespace HashCode.QualificationRound._2020
         public int BookPerDay { get; set; }
 
         public int[] Books { get; set; }
+
+        public int Id { get; set; }
     }
 
     public class Input
@@ -34,6 +36,33 @@ namespace HashCode.QualificationRound._2020
         public void TestMethod1()
         {
 
+            var input = new Input()
+            {
+                Libraries = new Library[]
+                {
+                    new Library()
+                    {
+                        DaysToSign = 0,
+                    },
+                    new Library()
+                        { },
+                }
+            };
+
+
+        }
+
+        [TestMethod]
+        public void TestParseOutput()
+        {
+            var library1 = new Library()
+            {
+                //BookPerDay
+            };
+            var output = new Output()
+            {
+                
+            };
         }
     }
 }
