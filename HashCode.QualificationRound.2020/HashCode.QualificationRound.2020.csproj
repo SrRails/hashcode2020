@@ -8,6 +8,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="input\a_example.txt" />
+    <None Remove="input\b_read_on.txt" />
+    <None Remove="input\c_incunabula.txt" />
+    <None Remove="input\d_tough_choices.txt" />
+    <None Remove="input\e_so_many_books.txt" />
+    <None Remove="input\f_libraries_of_the_world.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="FluentAssertions" Version="5.7.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.2.0" />
     <PackageReference Include="MSTest.TestAdapter" Version="1.4.0" />
@@ -16,7 +25,24 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="input\" />
+    <Content Include="input\a_example.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="input\b_read_on.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="input\c_incunabula.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="input\d_tough_choices.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="input\e_so_many_books.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="input\f_libraries_of_the_world.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>

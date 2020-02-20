@@ -20,14 +20,20 @@ namespace HashCode.QualificationRound._2020
         public int DaysForScanning { get; set; }
     }
 
+    public class Output
+    {
+        public int NumberOfLibraries { get; set; }
+
+        public Library[] Libraries { get; set; }
+    }
 
     [TestClass]
     public class UnitTest1
     {
-        
         [TestMethod]
         public void TestMethod1()
         {
+
         }
     }
 }
