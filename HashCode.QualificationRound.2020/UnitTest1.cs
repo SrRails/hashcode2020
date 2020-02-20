@@ -63,7 +63,7 @@ namespace HashCode.QualificationRound._2020
         }
 
         [TestMethod]
-        public void CalculateSolution()
+        public void CalculateSolutionA()
         {
             var input = Input.ParseInputFile(@"input\a_example.txt");
 

@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
@@ -9,7 +10,7 @@ namespace HashCode.QualificationRound._2020
         public int BooksQty { get; set; }
         public int LibrariesQty { get; set; }
         public Library[] Libraries { get; set; }
-        public int[] Catalog { get; set; }
+        public List<Book> Catalog { get; set; } = new List<Book>();
         public int DaysForScanning { get; set; }
         public static Input ParseInputFile(string path)
         {
@@ -21,8 +22,13 @@ namespace HashCode.QualificationRound._2020
             result.LibrariesQty = Int32.Parse(header[1]);
             result.DaysForScanning = Int32.Parse(header[2]);
 
-            result.Catalog = new int[result.BooksQty];
-            result.Catalog = reader.ReadLine().Split(" ").Select(Int32.Parse).ToArray();
+
+            var tempCatalog = reader.ReadLine().Split(" ").Select(Int32.Parse).ToArray();
+
+            for (int i = 0; i < tempCatalog.Length-1; i++)
+            {
+                result.Catalog.Add(new Book() { Id =i, Score = tempCatalog[i]});
+            }
 
             result.Libraries = new Library[result.LibrariesQty];
 
@@ -40,5 +46,12 @@ namespace HashCode.QualificationRound._2020
             }
             return result;
         }
+    }
+
+    public class Book
+    {
+        public int Id { get; set; }
+        public int Score { get; set; }
+        public bool Scanned { get; set; } = false;
     }
 }

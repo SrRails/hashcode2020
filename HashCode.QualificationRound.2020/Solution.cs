@@ -1,4 +1,5 @@
 using System;
+using System.Data.Common;
 
 namespace HashCode.QualificationRound._2020
 {
@@ -23,11 +24,21 @@ namespace HashCode.QualificationRound._2020
 
                     Int64 dayForScanning = input.DaysForScanning - dayPassed;
 
-                    Int64 bookScanned = dayForScanning * library.BookPerDay;
+                    Int64 maxBooksScan = dayForScanning * library.BookPerDay;
+                    var scanned=0;
 
-                    for (var index = 0; index < bookScanned && index < library.BooksQty; index++)
+                    var index = 0;
+
+                    while (index < library.BooksQty-1 && scanned < maxBooksScan)
                     {
-                        newLibrary.Books.Add(library.Books[index]);
+                        if (!input.Catalog[library.Books[index]].Scanned)
+                        {
+                            newLibrary.Books.Add(library.Books[index]);
+                            input.Catalog[library.Books[index]].Scanned = true;
+                            scanned++;
+                        }
+
+                        index++;
                     }
 
                     newLibrary.BooksQty = newLibrary.Books.Count;
