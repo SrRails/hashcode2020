@@ -1,3 +1,4 @@
+//copyright Dani
 namespace HashCode.PracticeRound._2020
 {
     public class Solution
