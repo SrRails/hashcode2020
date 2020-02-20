@@ -19,16 +19,17 @@ namespace HashCode.QualificationRound._2020
             foreach (var library in this.Libraries)
             {
                 file.Write(library.Id);
-                file.Write(" ");
-                file.Write(library.Books.Count);
-                file.Write("\n");
-
-                foreach (var book in library.Books)
-                {
-                    file.Write(book);
                     file.Write(" ");
-                }
-                file.Write("\n");
+                    file.Write(library.Books.Count);
+                    file.Write("\n");
+
+                    foreach (var book in library.Books)
+                    {
+                        file.Write(book.Id);
+                        file.Write(" ");
+                    }
+
+                    file.Write("\n");
             }
             file.Write("\n");
         }

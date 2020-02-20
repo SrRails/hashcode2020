@@ -31,10 +31,10 @@ namespace HashCode.QualificationRound._2020
 
                     while (index < library.BooksQty-1 && scanned < maxBooksScan)
                     {
-                        if (!input.Catalog[library.Books[index]].Scanned)
+                        if (!input.Catalog[library.Books[index].Id].Scanned)
                         {
                             newLibrary.Books.Add(library.Books[index]);
-                            input.Catalog[library.Books[index]].Scanned = true;
+                            input.Catalog[library.Books[index].Id].Scanned = true;
                             scanned++;
                         }
 
@@ -46,7 +46,10 @@ namespace HashCode.QualificationRound._2020
                     newLibrary.BookPerDay = library.BookPerDay;
                     newLibrary.DaysToSign = library.DaysToSign;
 
-                    result.Libraries.Add(newLibrary);
+                    if (newLibrary.Books.Count > 0)
+                    { 
+                        result.Libraries.Add(newLibrary);
+                    }
                 }
                 else
                 {

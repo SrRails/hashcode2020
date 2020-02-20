@@ -6,7 +6,7 @@ namespace HashCode.QualificationRound._2020
     {
         public int DaysToSign { get; set; }
         public int BookPerDay { get; set; }
-        public List<int> Books { get; set; } = new List<int>();
+        public List<Book> Books { get; set; } = new List<Book>();
         public int Id { get; set; }
         public int BooksQty { get; set; }
     }

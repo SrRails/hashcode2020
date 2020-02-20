@@ -27,13 +27,13 @@ namespace HashCode.QualificationRound._2020
 
         }
 
-        [TestMethod]
-        public void TestParseOutput()
-        {
-            var output = GetExampleOutput();
+        //[TestMethod]
+        //public void TestParseOutput()
+        //{
+        //    var output = GetExampleOutput();
 
-            output.WriteOutput(@"output\example.txt");
-        }
+        //    output.WriteOutput(@"output\example.txt");
+        //}
 
         [TestMethod]
         public void TestReadFile()
@@ -43,24 +43,24 @@ namespace HashCode.QualificationRound._2020
             result.Should().NotBeNull();
 
         }
-        private static Output GetExampleOutput()
-        {
-            var library1 = new Library()
-            {
-                Id = 1,
-                Books = new List<int>() { 5, 2, 3 },
-            };
-            var library2 = new Library()
-            {
-                Id = 0,
-                Books = new List<int>() { 0, 1, 2, 3, 4 },
-            };
+        //private static Output GetExampleOutput()
+        //{
+        //    //var library1 = new Library()
+        //    //{
+        //    //    Id = 1,
+        //    //    Books = new List<int>() { 5, 2, 3 },
+        //    //};
+        //    //var library2 = new Library()
+        //    //{
+        //    //    Id = 0,
+        //    //    Books = new List<int>() { 0, 1, 2, 3, 4 },
+        //    //};
 
-            return new Output()
-            {
-                Libraries = new List<Library> { library1, library2 },
-            };
-        }
+        //    //return new Output()
+        //    //{
+        //    //    Libraries = new List<Library> { library1, library2 },
+        //    //};
+        //}
 
         [TestMethod]
         public void CalculateSolutionA()
