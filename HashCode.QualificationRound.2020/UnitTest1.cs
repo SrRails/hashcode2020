@@ -8,7 +8,6 @@ namespace HashCode.QualificationRound._2020
         [TestMethod]
         public void TestMethod1()
         {
-            
         }
     }
 }
