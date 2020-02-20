@@ -1,17 +1,9 @@
-using System;
+using System.Collections.Generic;
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace HashCode.QualificationRound._2020
 {
-    public class Solution
-    {
-        public static Output Process(Input input)
-        {
-            throw new NotImplementedException("");
-        }
-    }
-
     [TestClass]
     public class UnitTest1
     {
@@ -58,7 +50,7 @@ namespace HashCode.QualificationRound._2020
 
             return new Output()
             {
-                Libraries = new Library[] { library1, library2 },
+                Libraries = new List<Library> { library1, library2 },
             };
         }
 
@@ -67,7 +59,7 @@ namespace HashCode.QualificationRound._2020
         {
             var input = new Input();
 
-            var result =Solution.Process(input);
+            var result = Solution.Process(input);
 
             GetExampleOutput().Should().BeEquivalentTo(result);
 

@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.IO;
 
 namespace HashCode.QualificationRound._2020
@@ -6,14 +7,14 @@ namespace HashCode.QualificationRound._2020
     {
         public int NumberOfLibraries { get; set; }
 
-        public Library[] Libraries { get; set; }
+        public List<Library> Libraries { get; set; }
 
         public void WriteOutput(string path)
         {
             Directory.CreateDirectory(Path.GetDirectoryName(path));
             using StreamWriter file = new StreamWriter(path);
 
-            file.WriteLine(this.Libraries.Length);
+            file.WriteLine(this.Libraries.Count);
 
             foreach (var library in this.Libraries)
             {
