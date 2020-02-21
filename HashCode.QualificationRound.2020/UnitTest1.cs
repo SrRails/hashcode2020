@@ -11,18 +11,18 @@ namespace HashCode.QualificationRound._2020
         public void TestMethod1()
         {
 
-            var input = new Input()
-            {
-                Libraries = new Library[]
-                {
-                    new Library()
-                    {
-                        DaysToSign = 0,
-                    },
-                    new Library()
-                        { },
-                }
-            };
+            //var input = new Input()
+            //{
+            //    Libraries = new Library[]
+            //    {
+            //        new Library()
+            //        {
+            //            DaysToSign = 0,
+            //        },
+            //        new Library()
+            //            { },
+            //    }
+            //};
 
 
         }

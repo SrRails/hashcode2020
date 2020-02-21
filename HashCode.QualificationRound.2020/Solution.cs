@@ -11,7 +11,7 @@ namespace HashCode.QualificationRound._2020
 
             var dayPassed = 0;
 
-            for(int c=0; c < input.Libraries.Length; c++ )
+            for(int c=0; c < input.Libraries.Count; c++ )
             {
                 var library = input.Libraries[c];
 
@@ -29,7 +29,7 @@ namespace HashCode.QualificationRound._2020
 
                     var index = 0;
 
-                    while (index < library.BooksQty-1 && scanned < maxBooksScan)
+                    while (index < library.BooksQty && scanned < maxBooksScan)
                     {
                         if (!input.Catalog[library.Books[index].Id].Scanned)
                         {
